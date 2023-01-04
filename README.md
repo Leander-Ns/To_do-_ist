@@ -8,4 +8,4 @@ An item added to the list can be checked off wich will give your item a linetrou
 
 Remember to uncheck an item before deleting it off your to do list. If not your counter will be incorrect (bug fix in progress)
 
-The amount of items you have added to your list is displayed opposed to how many of them you have checked off. like this 1/1
+The amount of items you have added to your list is displayed opposed to how many of them you have checked off. like this 3/1
