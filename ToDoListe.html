@@ -9,24 +9,24 @@
     <script src='ToDoList.js'></script>
 </head>
 <body>
+
     <p>
-        <h1>To Do Liste</h1>
+        <h1 id="header">To Do Liste</h1>
     </p>
 
     <p>
-        <h2>Tasks:</h2>
-        <h2>Tasks finished:</h2>
+        <h2 id="tasks"></h2>
     </p>
 
-
-    <input type="text" placeholder="skriv noe..." id="listeInput">
-    <button onclick="add_to_list()" id="addbutton">Click me</button>
+    <div id="outputbox">
     
-
-    <div id ="listeoutput">
-        
+        <div id="inputbox">
+            <input type="text" placeholder="Write something..." id="listeInput">
+            <button onclick="add_to_list()" id="addbutton">Add to list</button>
+            <div id ="listeoutput">
+      
+        </div>
     </div>
-    
-    
+
 </body>
 </html> 

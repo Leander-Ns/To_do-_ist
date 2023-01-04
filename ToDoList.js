@@ -2,6 +2,7 @@
 
 function add_to_list() {
 
+  addbutton();
   var x = document.getElementById("listeInput");
   var tag = document.createElement("li");
   tag.id = "listeoutput";
@@ -23,21 +24,28 @@ function add_to_list() {
     //delete list item when delete button is clicked
     deleteButton.addEventListener('click', function(){
       tag.remove();
+      var disp = document.getElementById("tasks");
+      count--;
+      taskupdate();
     })
 
     
-    //give every new list a checkbox
+    //creates a check box for every new list item
     var checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.id = "checkbox";
     tag.appendChild(checkbox);
-
-    //strikethrough list if the check box is checked
+    
+    //strikethrough list if the check box is checked off
     checkbox.addEventListener('click', function(){
-      if (checkbox.checked == true){
-        tag.style.textDecoration = "line-through";
-      } else {
+      if (tag.style.textDecoration == "line-through") {
         tag.style.textDecoration = "none";
+        checked--;
+        taskupdate();
+      } else {
+        tag.style.textDecoration = "line-through";
+        checked++;
+        taskupdate ();
       }
     })
   }
@@ -48,6 +56,32 @@ function add_to_list() {
     var inputField = document.getElementById("listeInput");
     inputField.focus();
   }
+
+
+  var count = 0;
+  var checked = 0;
+
+  // adds 1 to the counter
+  function addbutton () {
+      var disp = document.getElementById("tasks");
+      count++;
+      taskupdate();
+  }
+
+  //updates the counter
+  function taskupdate() {
+    var disp = document.getElementById("tasks");
+    disp.innerText = "Task: " + count + "/" + checked;
+  }
+ 
+
+
+
+
+
+ 
+  
+  
 
 
 
